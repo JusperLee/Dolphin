@@ -1,0 +1,66 @@
+# 📄 Paper Overview
+
+## Introduction
+
+In everyday ``cocktail party'' environments, target speech is easily overwhelmed by background interference. Audio-only separation approaches struggle in these complex acoustic scenes, whereas integrating synchronous visual cues greatly improves robustness. Nevertheless, many AVSS systems remain too cumbersome for deployment because they rely on heavyweight lip-reading backbones and iterative audio separators. *Dolphin* addresses this efficiency–accuracy dilemma by pairing lightweight visual and audio modules that retain state-of-the-art quality while shrinking computational cost.
+
+## Related Works
+
+We build upon recent visual front-ends that discretize lip motion, audio separators that combine convolution with attention, and studies exploring efficient transformer alternatives. Compared with prior approaches, *Dolphin* leverages discrete lip semantics and hierarchical attention to produce compact yet expressive representations that can replace heavier networks.
+
+## Methods
+
+### Overall Pipeline
+
+![Dolphin Architecture](/Dolphin/overall-pipeline.png)
+
+The end-to-end system combines a discrete lip semantics encoder with a lightweight audio separator that exchanges information through cross-modal alignment modules.
+
+### DP-LipCoder
+
+![Video Encoder](/Dolphin/video-ae.png)
+
+- Dual-path lightweight video encoder distilled from AV-HuBERT to map lip sequences into discrete audio-aligned semantic tokens.
+- Vector-quantized branches separately preserve spatio-temporal structure and semantic alignment, mitigating the path dependence on large lip-reading backbones.
+- Knowledge distillation and discrete representations yield compact codes that maintain semantic fidelity for cross-modal alignment.
+
+### Lightweight Audio Separator
+
+![Separator](/Dolphin/separator.png)
+
+- Single-pass TDANet-inspired separator augmented with global–local attention (GLA) at every layer.
+- Coarse self-attention in the global branch models long-range structure, while heat diffusion attention smooths local details and suppresses noise.
+- Achieves high-quality separation without iterative refinement, sharply reducing runtime and MACs.
+
+### Key Components
+
+![GA-MSA](/Dolphin/ga-msa.png)
+
+- **Heat-Conv Blocks** improve multi-scale modeling with minimal overhead.
+- **Hierarchical Top-Down Attention** fuses global context with fine-grained cues.
+- **Cross-Modal Alignment** ensures discrete lip semantics guide the audio pathway effectively.
+
+## Experiment Configurations
+
+Evaluations cover three public AVSS benchmarks with standardized preprocessing pipelines. Training uses Python 3.11 with PyTorch and PyTorch Lightning. All experiments run on a server equipped with eight NVIDIA 5090 GPUs, and full hyperparameter grids plus configuration files are documented in the supplementary materials.
+
+## Results
+
+*Dolphin* consistently surpasses the previous state of the art in SI-SNRi and PESQ while maintaining robust visual grounding. Highlights from our evaluation:
+
+- 🥂 **Cocktail-Party Robustness**: Integrates visual cues to stabilize separation where audio-only systems fail.
+- 🎬 **DP-LipCoder**: Dual-path VQ encoder distills AV-HuBERT knowledge into audio-aligned lip tokens.
+- 🌐 **Global–Local Attention**: Merges coarse self-attention and heat diffusion smoothing within a single-pass separator.
+- ⚡ **Edge-Ready Efficiency**: Delivers >50% parameter reduction, 2.4× lower MACs, and 6× faster GPU inference versus IIANet.
+
+![Results Table](/Dolphin/results.png)
+
+![Efficiency Comparison](/Dolphin/efficiency_comparison.png)
+
+## Conclusions
+
+By coupling DP-LipCoder with a global–local attentive separator, *Dolphin* resolves the long-standing trade-off between separation quality and efficiency. The architecture demonstrates strong generalization across diverse datasets and provides a practical foundation for real-world AVSS deployments.
+
+## Reproducibility Statement
+
+Implementation relies on widely adopted deep learning tooling, and we commit to open-sourcing the full codebase, configuration files, pretrained checkpoints, and data preprocessing scripts upon publication. Datasets remain under their original licenses, but instructions and scripts for acquisition are provided. A PyTorch implementation of vector quantization is readily accessible via [vector-quantize-pytorch](https://pypi.org/project/vector-quantize-pytorch/), and evaluation metrics plus loss formulations are covered in the appendices. The final repository will be released under the Apache-2.0 license at [https://github.com/JusperLee/Dolphin](https://github.com/JusperLee/Dolphin).

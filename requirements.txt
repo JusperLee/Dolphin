@@ -1,0 +1,14 @@
+torch
+torchaudio
+torchvision
+moviepy
+face_alignment
+beartype
+taylor_series_linear_attention
+huggingface_hub
+einops
+vector_quantize_pytorch
+spaces
+tf-keras
+retina-face
+safetensors

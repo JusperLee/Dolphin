@@ -1,0 +1,7 @@
+# Abstract
+
+Audio-visual speech separation (AVSS) methods leverage visual cues to extract target speech and deliver strong separation in noisy acoustic environments. However, most existing systems rely on heavy visual backbones and computationally intensive audio separators, making them impractical when separation is used merely as a preprocessing stage for downstream speech processing.
+
+To address this issue, we propose an efficient AVSS framework named *Dolphin*. On the visual side, we introduce **DP-LipCoder**, a dual-path lightweight encoder that maps lip motion into discrete, audio-aligned semantic tokens. On the audio side, we design a lightweight encoder–decoder separator in which every layer contains a global–local attention (GLA) block to efficiently capture multi-scale dependencies.
+
+Experiments on three benchmark datasets show that *Dolphin* not only surpasses the current state of the art in separation quality but also delivers substantial efficiency gains: over **50%** fewer parameters, more than **2.4×** reduction in MACs, and over **6×** faster GPU inference. These results highlight *Dolphin* as a practical and deployable solution for high-performance AVSS. Our code and demo are publicly available at [http://cslikai.cn/Dolphin/](http://cslikai.cn/Dolphin/).
