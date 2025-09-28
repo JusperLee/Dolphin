@@ -633,6 +633,11 @@ with gr.Blocks(
         - RetinaFace for face detection
         - Dolphin model for audio-visual separation
         - GPU acceleration when available
+        <footer style="display:none;">
+            <a href='https://clustrmaps.com/site/1c828' title='Visit tracker'>
+                <img src='//clustrmaps.com/map_v2.png?cl=080808&w=300&t=tt&d=XYmTC4S_SxuX7G06iJ16lU43VCNkCBFRLXMfEM5zvmo&co=ffffff&ct=808080'/>
+            </a>
+        </footer>
         """
     )
     
