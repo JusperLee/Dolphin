@@ -70,7 +70,7 @@ const buttons = [
   {
     disabled: false,
     name: "📜 Paper",
-    link: "https://arxiv.org/",
+    link: "https://arxiv.org/abs/2509.23610",
     component: Document,
   },
   {

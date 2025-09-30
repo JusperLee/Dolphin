@@ -11,8 +11,8 @@
   <img src="https://visitor-badge.laobi.icu/badge?page_id=JusperLee.Dolphin" alt="访客统计" />
   <img src="https://img.shields.io/github/stars/JusperLee/Dolphin?style=social" alt="GitHub stars" />
   <img alt="Static Badge" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" />
-  <a href="https://arxiv.org/" target="_blank" rel="noreferrer noopener">
-    <img alt="arXiv Paper" src="https://img.shields.io/badge/arXiv-Coming%20Soon-b31b1b.svg?logo=arxiv&logoColor=white" />
+  <a href="https://arxiv.org/abs/2509.23610" target="_blank" rel="noreferrer noopener">
+    <img alt="arXiv Paper" src="https://img.shields.io/badge/arXiv-2509.23610-b31b1b.svg?logo=arxiv&logoColor=white" />
   </a>
   <a href="https://huggingface.co/JusperLee/Dolphin" target="_blank" rel="noreferrer noopener">
     <img alt="Hugging Face Models" src="https://img.shields.io/badge/Hugging%20Face-Models-ff9d2c?logo=huggingface&logoColor=white" />
@@ -161,11 +161,14 @@ python inference.py \
 If you find Dolphin useful in your research, please cite:
 
 ```bibtex
-@article{anonymous2025Dolphin,
-  title={Dolphin: Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Hierarchical Top-Down Attention},
-  author={Anonymous},
-  journal={Under Review},
-  year={2025}
+@misc{li2025efficientaudiovisualspeechseparation,
+      title={Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Multi-Scale Global-Local Attention}, 
+      author={Kai Li and Kejun Gao and Xiaolin Hu},
+      year={2025},
+      eprint={2509.23610},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2509.23610}, 
 }
 ```
 

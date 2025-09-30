@@ -3,11 +3,14 @@ export default {
   data() {
     return {
       bibtex: [
-        "@article{anonymous2025Dolphin,",
-        "    title={Dolphin: Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Hierarchical Top-Down Attention},",
-        "    author={Anonymous},",
-        "    journal={Under Review},",
-        "    year={2025}",
+        "@misc{li2025efficientaudiovisualspeechseparation,",
+        "      title={Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Multi-Scale Global-Local Attention}, ",
+        "      author={Kai Li and Kejun Gao and Xiaolin Hu},",
+        "      year={2025},",
+        "      eprint={2509.23610},",
+        "      archivePrefix={arXiv},",
+        "      primaryClass={cs.SD},",
+        "      url={https://arxiv.org/abs/2509.23610}, ",
         "}",
       ],
     }
