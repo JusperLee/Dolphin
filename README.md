@@ -18,7 +18,10 @@
     <img alt="Hugging Face Models" src="https://img.shields.io/badge/Hugging%20Face-Models-ff9d2c?logo=huggingface&logoColor=white" />
   </a>
   <a href="https://huggingface.co/spaces/JusperLee/Dolphin" target="_blank" rel="noreferrer noopener">
-    <img alt="Hugging Face Models" src="https://img.shields.io/badge/Hugging%20Face-Spaces-ff9d2c?logo=huggingface&logoColor=white" />
+    <img alt="Hugging Face Spaces" src="https://img.shields.io/badge/%20Hugging%20Face-Space-yellow.svg?logo=huggingface&logoColor=white" />
+  </a>
+  <a href="https://cslikai.cn/Dolphin" target="_blank" rel="noreferrer noopener">
+    <img alt="Demo Page" src="https://img.shields.io/badge/Demo-Page-blue.svg" />
   </a>
 </p>
 
