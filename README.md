@@ -17,8 +17,8 @@
   <a href="https://huggingface.co/JusperLee/Dolphin" target="_blank" rel="noreferrer noopener">
     <img alt="Hugging Face Models" src="https://img.shields.io/badge/Hugging%20Face-Models-ff9d2c?logo=huggingface&logoColor=white" />
   </a>
-  <a href="https://dolphin.cslikai.cn/" target="_blank" rel="noreferrer noopener">
-    <img alt="Gradio Live Demo" src="https://img.shields.io/badge/Gradio-Live%20Demo-00a67e?logo=gradio&logoColor=white" />
+  <a href="https://huggingface.co/spaces/JusperLee/Dolphin" target="_blank" rel="noreferrer noopener">
+    <img alt="Hugging Face Models" src="https://img.shields.io/badge/Hugging%20Face-Spaces-ff9d2c?logo=huggingface&logoColor=white" />
   </a>
 </p>
 
