@@ -10,7 +10,7 @@
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=JusperLee.Dolphin" alt="访客统计" />
   <img src="https://img.shields.io/github/stars/JusperLee/Dolphin?style=social" alt="GitHub stars" />
-  <img alt="Static Badge" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" />
+  <img alt="Source code license" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" />
   <a href="https://openreview.net/forum?id=LaIkPfPu9K" target="_blank" rel="noreferrer noopener">
     <img alt="ICLR 2026 OpenReview" src="https://img.shields.io/badge/ICLR%202026-OpenReview-8c1b13.svg?logo=openreview&logoColor=white" />
   </a>
@@ -348,9 +348,24 @@ We thank the authors of [IIANet](https://github.com/JusperLee/IIANet) and [SepRe
 
 For questions and feedback, please open an issue on GitHub or contact us at: [tsinghua.kaili@gmail.com](tsinghua.kaili@gmail.com)
 
-## 📄 License
+## 📄 Licensing and Model Provenance
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Except where a file-level notice states otherwise, Dolphin-owned source code
+in this repository is licensed under the
+[Apache License 2.0](LICENSE). Portions adapted from IIANet and SepReformer
+are also distributed under Apache-2.0. See [NOTICE](NOTICE) and
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution details.
+
+The source-code license does **not** by itself grant rights to the released
+model weights, training datasets, source recordings, or other third-party
+materials. The currently released checkpoint contains a video encoder trained
+with feature targets produced by AV-HuBERT. No separate permission from Meta
+is included with this release.
+
+Pending written clarification of the relevant upstream terms and completion
+of our data-provenance review, we do not represent the current checkpoint as
+cleared for commercial or production use. Please read
+[MODEL_PROVENANCE.md](MODEL_PROVENANCE.md) before using the model artifacts.
 
 <p align="center">
   Made with stars ⭐️ for efficient audio-visual speech separation
